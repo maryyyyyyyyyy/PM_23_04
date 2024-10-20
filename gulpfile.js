@@ -20,3 +20,11 @@ gulp.task('html', function() {
         .pipe(gulp.dest('./dist'))
         .pipe(browserSync.stream());
 });
+
+// Таск для SCSS
+gulp.task('scss', function() {
+    return gulp.src(paths.scss)
+        .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+        .pipe(gulp.dest('./dist/css'))
+        .pipe(browserSync.stream());
+});
