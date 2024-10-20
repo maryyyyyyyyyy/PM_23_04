@@ -28,3 +28,13 @@ gulp.task('scss', function() {
         .pipe(gulp.dest('./dist/css'))
         .pipe(browserSync.stream());
 });
+
+// Таск для JavaScript
+gulp.task('js', function() {
+    return gulp.src(paths.js)
+        .pipe(concat('app.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('./dist/js'))
+        .pipe(browserSync.stream());
+});
+
