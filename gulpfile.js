@@ -62,3 +62,5 @@ gulp.task('watch', function() {
     gulp.watch(paths.img, gulp.series('img'));
 });
 
+// Основний таск, що запускає всі інші
+gulp.task('default', gulp.parallel('html', 'scss', 'js', 'img', 'browser-sync', 'watch'));
