@@ -53,3 +53,12 @@ gulp.task('browser-sync', function() {
         }
     });
 });
+
+// Таск для спостереження за змінами
+gulp.task('watch', function() {
+    gulp.watch(paths.html, gulp.series('html'));
+    gulp.watch(paths.scss, gulp.series('scss'));
+    gulp.watch(paths.js, gulp.series('js'));
+    gulp.watch(paths.img, gulp.series('img'));
+});
+
