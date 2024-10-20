@@ -44,3 +44,12 @@ gulp.task('img', function() {
         .pipe(imagemin())
         .pipe(gulp.dest('./dist/images'));
 });
+
+// Налаштування BrowserSync
+gulp.task('browser-sync', function() {
+    browserSync.init({
+        server: {
+            baseDir: './dist'
+        }
+    });
+});
