@@ -38,3 +38,9 @@ gulp.task('js', function() {
         .pipe(browserSync.stream());
 });
 
+// Таск для оптимізації зображень
+gulp.task('img', function() {
+    return gulp.src(paths.img)
+        .pipe(imagemin())
+        .pipe(gulp.dest('./dist/images'));
+});
