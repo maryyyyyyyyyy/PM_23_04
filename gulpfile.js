@@ -1,3 +1,4 @@
+//glupfile
 // Підключення пакетів
 const gulp = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
@@ -8,10 +9,10 @@ const imagemin = require('gulp-imagemin');
 
 // Шляхи до файлів
 const paths = {
-    html: './src/**/*.html',
-    scss: './src/scss/**/*.scss',
-    js: './src/js/**/*.js',
-    img: './src/images/**/*'
+    html: './app/*.html',
+    scss: './app/scss/**/*.scss',
+    js: './app/js/**/*.js',
+    img: './app/img/**/*'
 };
 
 // Таск для HTML
@@ -38,12 +39,21 @@ gulp.task('js', function() {
         .pipe(browserSync.stream());
 });
 
-// Таск для оптимізації зображень
+// //Таск для оптимізації зображень
+// gulp.task('img', function() {
+//     return gulp.src(paths.img)
+//         .pipe(imagemin({
+//             progressive: true,
+//             svgoPlugins: [{removeViewBox: false}],
+//             interlaced: true
+//         }))
+//         .pipe(gulp.dest('./dist/images'));
+// });
+
 gulp.task('img', function() {
-    return gulp.src(paths.img)
-        .pipe(imagemin())
-        .pipe(gulp.dest('./dist/images'));
-});
+    return gulp.src('./app/img/**/*', {encoding:false})
+        .pipe(gulp.dest('./dist/img'))
+})
 
 // Налаштування BrowserSync
 gulp.task('browser-sync', function() {
@@ -63,4 +73,4 @@ gulp.task('watch', function() {
 });
 
 // Основний таск, що запускає всі інші
-gulp.task('default', gulp.parallel('html', 'scss', 'js', 'img', 'browser-sync', 'watch'));
+gulp.task('default', gulp.parallel('html', 'scss', 'js', 'img','browser-sync', 'watch'));

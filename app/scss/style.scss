@@ -1,0 +1,210 @@
+// Змінні
+$primary-color: #ffc107;
+$secondary-color: #eeeeee;
+$text-color: #333;
+$font-family: 'Poppins', sans-serif;
+
+// Основні стилі
+body {
+  font-family: $font-family;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+}
+
+.resume {
+  display: flex;
+  max-width: 800px;
+  margin: 80px auto;
+  padding-bottom: 50px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  min-height: 100vh; /* Забезпечує висоту на весь екран */
+  position: relative; /* Для правильного позиціонування стрічок */
+}
+
+.ribbon {
+  width: 50px;
+  height: 30px; /* Висота стрічки */
+  background-color: #f2c100; /* Колір стрічки */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Тінь для кращого ефекту */
+  position: absolute; /* Позиціонуємо відносно верхнього краю */
+  top: 0; /* Встановлюємо її в самий верх */
+}
+
+// Ліва колонка для контактів і фото
+.left-column {
+  width: 50%; /* Ширина лівої колонки */
+  background-color: $secondary-color;
+  padding: 25px;
+  color: $text-color;
+  position: relative;
+  min-height: 100vh;
+}
+
+.profile-pic {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.profile-pic img {
+  border-radius: 50%;
+  width: 270px;
+  height: 271px;
+  border: 5px solid $secondary-color;
+}
+.ribbon-bottom {
+    width: 50px;
+    height: 30px;
+    background-color: #f2c100;
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    bottom: 0px; /* Відступ від низу */
+    left: 25px; /* Відступ від лівого краю */
+}
+
+
+// Права колонка для тексту та основної інформації
+.right-column {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 30px;
+}
+
+// Заголовки і текст у правій колонці
+h1, h2, h3 {
+  font-size: 45px;
+  letter-spacing: 3px;
+  line-height: 31px;
+  text-transform: uppercase;
+  color: #f2c100;
+  font-weight: bold;
+  font-family: "Bebas Neue", serif;
+}
+
+h1.name {
+  font-size: 50px;
+  line-height: 50px;
+  color: #f2c100;
+  font-weight: bold;
+  font-family: "Bebas Neue", serif;
+  display: block;
+}
+
+h3 {
+  color: $text-color;
+  font-weight: normal;
+  font-size: 1em;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+// Декоративна лінія під заголовками
+h2 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  position: relative;
+}
+
+h2::after {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 2px;
+  background-color: $primary-color;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+
+// Контактна інформація та інші розділи у лівій колонці
+.contact, .education, .skills {
+  font-size: 1em;
+  margin-bottom: 20px;
+}
+
+// Список навичок з жовтими крапками
+.skills ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.skills ul li {
+  font-size: 1em;
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 15px;
+}
+
+.skills ul li::before {
+  content: '•';
+  color: $primary-color;
+  position: absolute;
+  left: 0;
+  font-size: 1.2em;
+}
+
+.reference-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Розподіляє елементи рівномірно */
+  gap: 20px; /* Відстань між текстом та лінією */
+  font-size: 1em;
+  line-height: 1.5;
+  color: #555555;
+  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+}
+
+.reference-item {
+  width: 45%; /* Більший простір для кожного блоку */
+  text-align: left;
+  font-size: 1em;
+  color: #333;
+}
+
+.separator {
+  width: 4px; /* Ширина лінії */
+  height: 100px; /* Висота лінії, регулюйте за потребою */
+  background-color: #f1cb59; /* Колір лінії */
+}
+
+// Іконки для Hobbies
+.hobbies .icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+.icons i.outlined-icon {
+  font-size: 1.5em;
+  color: #333;
+  background-color: #ffffff;
+  padding: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  object-fit: contain;
+}
+.outlined-icon {
+  width: 40px;
+  height: 40px;
+}
+.animated-text {
+  position: relative;
+  transition: transform 1s ease-in-out; /* Плавний перехід для тексту */
+}
+
+.animated-text.move-up {
+  transform: translateY(-50px); /* Рух вгору на 50px */
+}
+
+.icon {
+  display: inline-block;
+  transition: transform 1s ease-in-out; /* Плавність обертання */
+}
+
+.icon.rotate {
+  transform: rotate(360deg); /* Обертання на 360 градусів */
+}

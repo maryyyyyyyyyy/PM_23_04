@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Resume</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Стилі для іконок і анімації */
+        .icon {
+            display: inline-block;
+            transition: transform 1s ease-in-out; /* Плавність обертання */
+        }
+
+        .icon.rotate {
+            transform: rotate(360deg); /* Обертання на 360 градусів */
+        }
+
+        /* Стилі для анімації тексту */
+        .animated-text {
+            position: relative;
+            transition: transform 1s ease-in-out; /* Плавний перехід для тексту */
+        }
+
+        .animated-text.move-up {
+            transform: translateY(-50px); /* Рух вгору на 50px */
+        }
+    </style>
+</head>
+<body>
+<div class="resume">
+    <div class="left-column">
+        <div class="ribbon"></div>
+        <div class="profile-pic">
+            <img src="img/person.png" alt="Profile Picture">
+        </div>
+        <div class="contact">
+            <h2><strong>CONTACT</strong></h2>
+            <p><strong>Phone</strong><br>+000 123 456 789</p>
+            <p><strong>Email</strong><br>yourname@gmail.com</p>
+            <p><strong>Address</strong><br>Your Street Address<br>Town/City, zip code</p>
+        </div>
+        <div class="education">
+            <h2>EDUCATION</h2>
+            <p>2014 - 2016<br>Degree / Major Name<br>University name here</p>
+        </div>
+        <div class="skills">
+            <h2>SKILLS</h2>
+            <ul>
+                <li>Photoshop</li>
+                <li>Illustrator</li>
+                <li>InDesign</li>
+                <li>After Effects</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="right-column">
+        <h1 class="name"><strong>David </strong><br><strong>Anderson</strong><br></h1>
+        <h3><strong>UX DESIGNER</strong></h3>
+        <div class="profile">
+            <h2>PROFILE</h2>
+            <p class="animated-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+            </p>
+        </div>
+        <div class="experience">
+            <h2>EXPERIENCE</h2>
+            <p>Senior UX Designer - 2020<br>Company Name / Location</p>
+            <p>User Interface Designer - 2016<br>Company Name/ Location</p>
+        </div>
+        <div class="reference">
+            <h2>REFERENCE</h2>
+            <div class="reference-content">
+                <div class="reference-item">
+                    <p>Senior Designer<br><strong>John Ander Smith</strong><br>Company name here</p>
+                </div>
+                <div class="separator"></div>
+                <div class="reference-item">
+                    <p>Senior Designer<br><strong>John Ander Smith</strong><br>Company name here</p>
+                </div>
+            </div>
+        </div>
+        <div class="hobbies">
+            <h2>HOBBIES</h2>
+            <div class="icons">
+                <img src="img/travel.svg" alt="Travel Icon" class="outlined-icon icon">
+                <img src="img/audio.svg" alt="Audio Icon" class="outlined-icon icon">
+                <img src="img/document.svg" alt="Document Icon" class="outlined-icon icon">
+                <img src="img/chess.svg" alt="Chess Icon" class="outlined-icon icon">
+            </div>
+        </div>
+    </div>
+    <div class="ribbon-bottom"></div>
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
